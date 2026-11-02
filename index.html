@@ -66,6 +66,7 @@ footer {
     <h2>🛍️ Categorias da Sophi Mimos 3D</h2>
     
 <div class="categorias">
+  <button onclick="mostrarTodos()">🛍️ Ver todos</button>
   <button onclick="mostrarCategoria('personagens')">
   🐱 Personagens
 </button>
@@ -147,6 +148,45 @@ footer {
   <button>🛒 Comprar</button>
 </div>
 
+<div class="produto" data-categoria="organizacao">
+  <h3>📦 Porta-trecos 3D</h3>
+  <p>Organizador para guardar seus acessórios!</p>
+  <p>💗 Preço: R$ 10,00</p>
+  <button>🛒 Comprar</button>
+</div>
+
+<div class="produto" data-categoria="kits">
+  <h3>🎁 Kit Surpresa 3D</h3>
+  <p>Um kit com personagens e miniaturas surpresa!</p>
+  <p>💗 Preço: a definir</p>
+  <button>🛒 Comprar</button>
+</div>
+
+<div class="produto" data-categoria="personalizados">
+  <h3>💖 Chaveiro com Nome 3D</h3>
+  <p>Um chaveiro personalizado com seu nome!</p>
+  <label for="nome-chaveiro">✏️ Digite seu nome:</label>
+  <input type="text" id="nome-chaveiro"
+         placeholder="Seu nome">
+  <p>💗 Preço: a definir</p>
+  <button>🛒 Comprar</button>
+</div>
+
+<div class="produto" data-categoria="aniversario">
+  <h3>🎂 Lembrancinha de Aniversário 3D</h3>
+  <p>Uma lembrancinha especial para sua festa!</p>
+  <p>🎁 Personalização disponível.</p>
+  <p>💗 Preço: a definir</p>
+  <button>🛒 Comprar</button>
+</div>
+
+<div class="produto" data-categoria="promocoes">
+  <h3>🏷️ Promoções Especiais</h3>
+  <p>💗 Ofertas e descontos da Sophi Mimos 3D!</p>
+  <p>🎁 Em breve, novidades!</p>
+  <button disabled>Em breve</button>
+</div>
+
 
   </section>
 </main>
@@ -168,7 +208,15 @@ function mostrarCategoria(categoria) {
     }
   });
 }
-</script>
+function mostrarTodos() {
+  const produtos = document.querySelectorAll(
+    '[data-categoria]'
+  );
+
+  produtos.forEach(function(produto) {
+    produto.style.display = 'block';
+  });
+}</script>
 
 </body>
 </html>
