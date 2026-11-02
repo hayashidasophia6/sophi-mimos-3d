@@ -63,18 +63,112 @@ footer {
   <h2>Bem-vindo à nossa lojinha! 🎀</h2>
   <p>Escolha seus personagens favoritos!</p>
   <section id="produtos">
+    <h2>🛍️ Categorias da Sophi Mimos 3D</h2>
+    
+<div class="categorias">
+  <button onclick="mostrarCategoria('personagens')">
+  🐱 Personagens
+</button>
+<button onclick="mostrarCategoria('acessorios')">
+  💍 Acessórios
+</button>
+  <button onclick="mostrarCategoria('tecnologia')">
+  📱 Tecnologia
+</button>
+<button onclick="mostrarCategoria('asmr')">
+  🎮 ASMR e Brinquedos
+</button>
+<button onclick="mostrarCategoria('escolar')">
+  ✏️ Escolar
+</button>
+ <button onclick="mostrarCategoria('decoracao')">
+  🌷 Decoração
+</button>
+  <button onclick="mostrarCategoria('organizacao')">
+  📦 Organização
+</button>
+<button onclick="mostrarCategoria('kits')">
+  🎁 Kits
+</button>
+<button onclick="mostrarCategoria('personalizados')">
+  💖 Personalizados
+</button>
+<button onclick="mostrarCategoria('aniversario')">
+  🎂 Aniversário
+</button>
+<button onclick="mostrarCategoria('promocoes')">
+  🏷️ Promoções
+</button>
+</div>
     <h2>🛍️ Nossos produtos</h2>
-    <div class="produto">
+<div class="produto" data-categoria="personagens">
       <h3>Personagens 3D</h3>
+      <p>💗 Preço: R$ 10,00</p>
+      <p>📏 Tamanhos disponíveis: P, M e G</p>
+    <p>🎨 Cores disponíveis: Dourado, Bege, Branco, Preto, Verde, Rosa-choque, Vermelho, Lilás, Amarelo e Ciano.</p>
       <p>Escolha seu personagem e suas cores!</p>
       <button onclick="alert('Catálogo em breve!')">
         Ver opções
       </button>
     </div>
+ 
+<div class="produto" data-categoria="acessorios">
+  <h3>💍 Chaveiro 3D</h3>
+  <p>Chaveiros fofinhos impressos em 3D!</p>
+  <p>💗 Preço: R$ 5,00</p>
+  <button>🛒 Comprar</button>
+</div>
+    
+<div class="produto" data-categoria="tecnologia">
+  <h3>📱 Suporte de Celular 3D</h3>
+  <p>Suporte para celular impresso em 3D!</p>
+  <p>💗 Preço: R$ 10,00</p>
+  <button>🛒 Comprar</button>
+</div>
+
+<div class="produto" data-categoria="asmr">
+  <h3>🐙 Polvo Articulado 3D</h3>
+  <p>Brinquedo articulado e divertido!</p>
+  <p>💗 Preço: R$ 10,00</p>
+  <button>🛒 Comprar</button>
+</div>
+
+<div class="produto" data-categoria="escolar">
+  <h3>✏️ Marcador de Página 3D</h3>
+  <p>Marcador de página fofo e personalizado!</p>
+  <p>💗 Preço: R$ 5,00</p>
+  <button>🛒 Comprar</button>
+</div>
+
+<div class="produto" data-categoria="decoracao">
+  <h3>🌷 Mini Vaso Decorativo 3D</h3>
+  <p>Um vasinho fofo para decorar seu quarto!</p>
+  <p>💗 Preço: R$ 10,00</p>
+  <button>🛒 Comprar</button>
+</div>
+
+
   </section>
 </main>
 <footer id="contato">
   💗 Sophi Mimos 3D — Feito com carinho
 </footer>
+
+<script>
+function mostrarCategoria(categoria) {
+  const produtos = document.querySelectorAll(
+    '[data-categoria]'
+  );
+
+  produtos.forEach(function(produto) {
+    if (produto.dataset.categoria === categoria) {
+      produto.style.display = 'block';
+    } else {
+      produto.style.display = 'none';
+    }
+  });
+}
+</script>
+
 </body>
 </html>
